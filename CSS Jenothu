@@ -1,1 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
+  <style>
+    body {
+      margin: 0;
+      background: #330000 url('https://i.imgur.com/4R0iRoD.png') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: sans-serif;
+    }
+
+    .card {
+      position: relative;
+      width: 300px;
+      height: 500px;
+      background: #f68c1f;
+      border-radius: 20px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(10, 1fr);
+      gap: 5px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .shape {
+      position: absolute;
+    }
+
+    .semi-circle {
+      width: 100px;
+      height: 50px;
+      background: #1c1c3c;
+      border-top-left-radius: 100px;
+      border-top-right-radius: 100px;
+      top: 20px;
+      left: 20px;
+      transform: rotate(-90deg);
+    }
+
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 50px solid #f24624;
+      top: 40px;
+      left: 130px;
+    }
+
+    .circle {
+      border-radius: 50%;
+      background: #1c1c3c;
+      position: absolute;
+    }
+
+    .circle1 {
+      width: 50px;
+      height: 50px;
+      top: 40px;
+      left: 200px;
+    }
+
+    .circle2 {
+      width: 80px;
+      height: 80px;
+      top: 120px;
+      left: 160px;
+    }
+
+    .rings {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 5px solid #1c1c3c;
+      top: 260px;
+      left: 20px;
+      box-sizing: border-box;
+    }
+
+    .rings::before {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 10px;
+      left: 10px;
+      border: 5px solid #1c1c3c;
+      border-radius: 50%;
+    }
+
+    .rings::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 20px;
+      left: 20px;
+      border: 5px solid #1c1c3c;
+      border-radius: 50%;
+    }
+
+    .dashed-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 5px dashed #1c1c3c;
+      top: 360px;
+      left: 180px;
+    }
+
+    .filled-orange {
+      width: 50px;
+      height: 50px;
+      background: #f24624;
+      border-radius: 50%;
+      top: 375px;
+      left: 195px;
+    }
+
+    .line {
+      height: 5px;
+      background: #1c1c3c;
+      position: absolute;
+    }
+
+    .line1 {
+      width: 100px;
+      top: 100px;
+      left: 10px;
+      transform: rotate(45deg);
+    }
+
+    .line2 {
+      width: 100px;
+      top: 120px;
+      left: 20px;
+      transform: rotate(45deg);
+    }
+
+    .line3 {
+      width: 100px;
+      top: 140px;
+      left: 30px;
+      transform: rotate(45deg);
+    }
+
+    .line4 {
+      width: 100px;
+      top: 160px;
+      left: 40px;
+      transform: rotate(45deg);
+    }
+
+    .long-line {
+      width: 150px;
+      height: 5px;
+      top: 450px;
+      left: 20px;
+      background: #1c1c3c;
+    }
+
+    .small-square {
+      width: 20px;
+      height: 20px;
+      background: #1c1c3c;
+      top: 240px;
+      left: 160px;
+    }
+
+    .small-rect {
+      width: 40px;
+      height: 6px;
+      background: #1c1c3c;
+      top: 250px;
+      left: 200px;
+    }
+
+    .orange-L {
+      width: 10px;
+      height: 100px;
+      background: #f24624;
+      top: 290px;
+      left: 90px;
+    }
+
+    .orange-L::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 10px;
+      background: #f24624;
+      left: 0;
+      top: 90px;
+    }
+
+    /* Medium label */
+    .label {
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .label::before,
+    .label::after
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <div class="shape semi-circle"></div>
+    <div class="shape triangle"></div>
+    <div class="shape circle circle1"></div>
+    <div class="shape circle circle2"></div>
+    <div class="shape rings"></div>
+    <div class="shape dashed-circle"></div>
+    <div class="shape filled-orange"></div>
+    <div class="shape line line1"></div>
+    <div class="shape line line2"></div>
+    <div class="shape line line3"></div>
+    <div class="shape line line4"></div>
+    <div class="shape long-line"></div>
+    <div class="shape small-square"></div>
+    <div class="shape small-rect"></div>
+    <div class="shape orange-L"></div>
+  </div>
+</body>
+</html>
