@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Geometric Shape</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
 
+    .shape {
+      position: relative;
+      width: 0;
+      height: 0;
+    }
+
+    .left, .right, .top {
+      position: absolute;
+      width: 100px;
+      height: 150px;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+
+    .left {
+      background-color: #2196f3;
+      transform: rotateY(0deg) skewY(0deg);
+      left: -100px;
+      z-index: 1;
+    }
+
+    .right {
+      background-color: #009688;
+      left: 0;
+      z-index: 1;
+    }
+
+    .top {
+      background-color: #26a69a;
+      width: 100px;
+      height: 100px;
+      clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+      top: -87px;
+      left: -50px;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="shape">
+    <div class="top"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+  </div>
+</body>
+</html>
